@@ -3,9 +3,8 @@
 export function validate(str) {
     const arr = str.split('-').map(s => parseInt(s));
 
-    const diff = (new Date()).getTime() - (new Date(arr[0], arr[1] - 1, arr[2])).getTime();
+    const now = new Date();
+    const diff = new Date(now.getFullYear() - 14, now.getMonth(), now.getDate());
 
-    return Number.parseInt(Math.abs(diff) / 1000 /60 /60 / 24) > 14;
+    return diff > new Date(arr[0], arr[1] - 1, arr[2]);
 }
-
-console.log(validate("2022-01-01"));
