@@ -2,7 +2,7 @@
 
 function getDateInfo() {
     const now = new Date();
-    const months = 12 - now.getMonth() + 1;
+    const months = 11 - now.getMonth();
     // Точка отсчёта для дней/часов/минут/секунд — 1-е число следующего месяца
     const nextMonthStart = new Date(now.getFullYear(), now.getMonth() + 1, 1);
     const diff = nextMonthStart - now;
