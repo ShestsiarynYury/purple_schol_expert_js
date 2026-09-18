@@ -22,7 +22,7 @@ function isLeap(year) {
 
 function getDays(month, isLeap) {
     if(isLeap) {
-        if (mounth === 1) {
+        if (month === 1) {
             return 29;
         } else {
             return mountDaysCount[String(month)];
