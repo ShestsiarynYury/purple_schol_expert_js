@@ -14,7 +14,7 @@ function getDateInfo() {
     const days = Math.floor(totalSeconds / 86400);
     
 
-    if(months === days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+    if (months === 0 && days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
         return null;
     }
 
