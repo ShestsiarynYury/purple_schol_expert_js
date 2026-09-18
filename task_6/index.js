@@ -54,12 +54,14 @@ function getDateInfo() {
 }
 
 const _isLeap = isLeap((new Date()).getFullYear());
+const timerElement = document.getElementById('timer');
+
 
 const intervalId = setInterval(() => {
     const info = getDateInfo();
 
     if (info) {
-        console.log(`${info.months} месяцев, ${info.days} дней, ${info.hours} часов, ${info.minutes} минут, ${info.seconds} секунд`);
+        timerElement.textContent = `${info.months} месяцев, ${info.days} дней, ${info.hours} часов, ${info.minutes} минут, ${info.seconds} секунд`;
     } else {
         clearInterval(intervalId);
     }
