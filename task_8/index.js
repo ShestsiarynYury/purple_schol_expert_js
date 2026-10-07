@@ -18,6 +18,6 @@ class Car {
     }
 
     info() {
-        console.log(`марка: ${this.#_model} пробег: ${this.#_mileage}`);
+        console.log(`марка: ${this.#_brand} модель: ${this.#_model} пробег: ${this.#_mileage}`);
     }
 }
