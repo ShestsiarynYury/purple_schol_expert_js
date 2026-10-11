@@ -7,10 +7,10 @@ request.addEventListener('load', function() {
 
     data.abilities.forEach(ability => {
         const innerRequest = new XMLHttpRequest();
-        innerRequest.open('GET', ability.url);
+        innerRequest.open('GET', ability.ability.url);
         innerRequest.addEventListener('load', function() {
             const data = JSON.parse(this.responseText);
-            const effect = data.find(effect => effect.language.name === 'en');
+            const effect = data.effect_entries.find(effect => effect.language.name === 'en');
             console.log(effect);
 
         });
