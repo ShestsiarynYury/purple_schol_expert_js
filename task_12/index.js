@@ -24,7 +24,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/ditto')
     .then(
         response => response.json()
     )
-    .then(
+    .then(data => {
         data.abilities.forEach(ability => {
             fetch(ability.ability.url)
                 .then(
@@ -38,6 +38,6 @@ fetch('https://pokeapi.co/api/v2/pokemon/ditto')
                 )
                 
         })
-    )
+    })
     .cathc( error => console.log(error.message))
 
