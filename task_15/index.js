@@ -10,12 +10,9 @@ wrapper.addEventListener('click', function(event) {
         });
 
         event.target.textContent = 'Нажата!';
-        if (counter.textContent === '') {
-            counter.textContent = '1';
-        } else {
-            let value = Number(counter.textContent);
-            value++;
-            counter.textContent = String(value);
-        }
+        
+        let value = Number(counter.textContent);
+        value++;
+        counter.textContent = String(value);
     }
 });
