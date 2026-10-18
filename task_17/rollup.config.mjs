@@ -2,20 +2,20 @@ import { defineConfig } from 'rollup';
 import html from '@rollup/plugin-html';
 
 export default defineConfig({
-  input: 'index.js', // Ваш главный исходный файл
+  input: 'index.js', 
   output: {
-    file: 'dist/bundle.js', // Куда складывать бандл
-    format: 'iife',         // Формат для браузера (самовызывающаяся функция)
-    sourcemap: true,        // Полезно для отладки в браузере
+    file: 'dist/bundle.js', 
+    format: 'iife',         
+    sourcemap: true,        
   },
   plugins: [
     html({
-      fileName: 'index.html', // Имя файла на выходе в папке dist
-      title: 'My Rollup App', // Заголовок страницы
-      // Кастомный шаблон, который сам генерирует правильный тег <script> без type="module"
+      fileName: 'index.html', 
+      title: 'My Rollup App', 
       template: ({ files, title }) => {
+        // ИСПРАВЛЕНО: используем file.fileName вместо file.name
         const scriptTag = (files.js || [])
-          .map(file => `<script src="./${file.name}"></script>`)
+          .map(file => `<script src="./${file.fileName}"></script>`)
           .join('\n');
 
         return `<!DOCTYPE html>
@@ -26,7 +26,7 @@ export default defineConfig({
     <title>${title}</title>
 </head>
 <body>
-    <div id="app">Приложение работает из сборки!</div>
+    <div id="app">Приложение успешно работает из сборки!</div>
     ${scriptTag}
 </body>
 </html>`;
