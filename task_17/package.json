@@ -7,11 +7,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "rollup index.js --file dist/bundle.js --format iife",
-    "start": "live-server dist"
+    "build": "rollup -c rollup.config.mjs",
+    "liveserver": "live-server dist",
+    "start": "npm run build && npm run liveserver"
   },
   "dependencies": {
     "live-server": "^1.2.2",
     "rollup": "^4.64.9"
+  },
+  "devDependencies": {
+    "@rollup/plugin-html": "^2.0.0"
   }
 }
