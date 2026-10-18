@@ -1,0 +1,16 @@
+{
+  "name": "task_17",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup && live-server dist"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "rollup": "^4.64.9"
+  }
+}
