@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c --watch",
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "eslint": "^10.13.0",
+    "live-server": "^1.2.2",
+    "rollup": "^4.64.10",
+    "rollup-plugin-import-css": "^4.2.1"
+  },
+  "dependencies": {
+    "on-change": "^6.0.2"
+  }
+}
